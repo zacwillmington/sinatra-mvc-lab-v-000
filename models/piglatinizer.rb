@@ -50,8 +50,8 @@ class PigLatinizer
          end
 
      def vowel_words_piglatinize(words)
-          word = words.split(//)
-        word.push("way").join
+
+        words.split(//).push("way").join
     end
 
     def consonant_words(words)
