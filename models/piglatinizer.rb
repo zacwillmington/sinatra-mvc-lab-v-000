@@ -30,7 +30,7 @@ class PigLatinizer
             elsif word[0] = "t" && word[1] == 'h'
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
-            elsif word[0] == "s" && word[1] == "p" && word[2] == "r"#consonant clusters of 3
+            elsif words[0] == "s" && words[1] == "p" && word[2] == "r"#consonant clusters of 3
                 binding.pry
                 latinized_word << words.shift("ay").join
             elsif word[0] == "s" && word[1] == "p"
