@@ -57,7 +57,7 @@ class PigLatinizer
     end
 
     def consonant_words(words)
-         word = words.split(//)
+        #  word = words.split(//)
         first_letter = word.unshift[0]
         word.shift[0]
         word << first_letter
