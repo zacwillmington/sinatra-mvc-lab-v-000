@@ -19,14 +19,15 @@ class PigLatinizer
 
     def piglatinize_single_word(words)
         latinized_word = []
+        word = words.split(//)
 
             vowels =["a","e","i","o","u","A","E", "O", "U"]
             if vowels.include?(words[0])
                 latinized_word << vowel_words_piglatinize(words)
-            elsif words[0] == "I" #for "I" in mid sentence
+            elsif word[0] == "I" #for "I" in mid sentence
                 latinized_word << words.split(//).push("way").join
                 binding.pry
-            elsif words[0] == "p" && words[1] == "l" #consonant clusters of 2
+            elsif word[0] == "p" && words[1] == "l" #consonant clusters of 2
                 binding.pry
                 latinized_word <<  consonant_cluster_of_2(words)
             elsif words[0] = "t" && words[1] == 'h'
