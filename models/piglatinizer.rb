@@ -39,9 +39,9 @@ class PigLatinizer
                   latinized_word << words.split(//).shift("ay").join
             else #single consonant words
                 binding.pry
-                consonant_words(words)
+                latinized_word << consonant_words(words)
             end
-            latinized_word
+            latinized_word.join
         end
 
         def piglatinize_phrase_string(words)
