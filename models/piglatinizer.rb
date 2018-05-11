@@ -8,7 +8,8 @@ class PigLatinizer
     end
 
     def piglatinize(words)
-        @words = words
+        
+        @words = words[:user_phrase]
         binding.pry
         word_arr = []
 
