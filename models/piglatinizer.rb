@@ -96,7 +96,7 @@ class PigLatinizer
         if string.split(" ").size == 1
             true
         else
-            string
+            false
         end
     end
 
