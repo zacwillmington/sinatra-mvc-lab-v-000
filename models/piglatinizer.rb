@@ -42,7 +42,8 @@ class PigLatinizer
               elsif @words == "prays"
                   #consonant clusters of 2
                     latinized_word << words.split(//).unshift("ay")
-            elsif word[0] == "p" && word[1] == 'r'
+            elsif word.include?("pr")
+                binding.pry
                 latinized_word << consonant_cluster_of_2(words)
             else #single consonant words
                 latinized_word << consonant_words(words)
@@ -56,7 +57,7 @@ class PigLatinizer
                 binding.pry
                  latinized_phrase << piglatinize_single_word(word)
              end
-             latinized_phrase.join(" ")    
+             latinized_phrase.join(" ")
          end
 
      def vowel_words_piglatinize(words)
