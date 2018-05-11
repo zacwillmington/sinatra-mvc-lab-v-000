@@ -39,7 +39,7 @@ class PigLatinizer
                   latinized_word << words.split(//).shift("ay").join
             else #single consonant words
                 binding.pry
-                latinized_word << consonant_words(words)
+                consonant_words(words)
             end
             latinized_word
         end
