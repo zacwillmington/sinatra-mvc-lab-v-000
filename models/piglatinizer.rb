@@ -24,13 +24,14 @@ class PigLatinizer
             if vowels.include?(word[0])
                 latinized_word << vowel_words_piglatinize(words)
             elsif word[0] == "I" #for "I" in mid sentence
-            latinized_word << word.push("way").join
+                latinized_word << word.push("way").join
             elsif word[0] == "p" && word[1] == "l" #consonant clusters of 2
                 latinized_word <<  consonant_cluster_of_2(words)
+                binding.pry
             elsif word[0] = "t" && word[1] == 'h'
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
-                # binding.pry
+                binding.pry
             elsif word[0] == "s" && word[1] == "p" && word[2] == "r"#consonant clusters of 3
                 binding.pry
                 latinized_word << consonant_cluster_of_3(words)
