@@ -19,7 +19,7 @@ class PigLatinizer
 
     def piglatinize_single_word(words)
         latinized_word = []
-        
+
             vowels =["a","e","i","o","u","A","E", "O", "U"]
             if vowels.include?(words[0])
                 latinized_word << vowel_words_piglatinize(words)
