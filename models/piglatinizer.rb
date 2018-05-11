@@ -73,7 +73,6 @@ class PigLatinizer
 
     def consonant_cluster_of_3(words)
          word = words.split(//)
-         binding.pry
         first_3_letters = word.unshift[0]
         first_3_letters += word.unshift[1]
         first_3_letters += word.unshift[2]
