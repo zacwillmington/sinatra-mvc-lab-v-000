@@ -21,7 +21,6 @@ class PigLatinizer
         latinized_word = []
 
             vowels =["a","e","i","o","u","A","E", "O", "U"]
-            binding.pry
             if vowels.include?(words[0])
                 latinized_word << vowel_words_piglatinize(words)
             elsif words[0] == "I" #for "I" in mid sentence
@@ -31,7 +30,7 @@ class PigLatinizer
             elsif words[0] = "t" && words[1] == 'h'
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
-            elsif words[0] == "s" && words[1] == "p" && word[2] == "r"#consonant clusters of 3
+            elsif words[0] == "s" && words[1] == "p" && words[2] == "r"#consonant clusters of 3
                 latinized_word << words.split(//).shift("ay").join
             elsif words[0] == "s" && words[1] == "p"
                 #consonant clusters of 2
