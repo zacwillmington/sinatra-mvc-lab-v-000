@@ -49,9 +49,9 @@ class PigLatinizer
         end
 
         def piglatinize_phrase_string(words)
-            words.split(" ").each do |word|
+            @words.split(" ").each do |word|
                 binding.pry
-                 latinized_phrase << piglatinize_single_word(@words)
+                 latinized_phrase << piglatinize_single_word(word)
              end
              latinized_phrase
          end
