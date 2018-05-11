@@ -20,7 +20,7 @@ class PigLatinizer
         end
     end
 
-    def piglatinize_single_word(@words)
+    def piglatinize_single_word(words)
         latinized_word = []
         word = @words.split(//)
 
@@ -60,7 +60,7 @@ class PigLatinizer
 
      def vowel_words_piglatinize(words)
 
-        words.split(//).push("way").join
+        @words.split(//).push("way").join
     end
 
     def consonant_words(words)
