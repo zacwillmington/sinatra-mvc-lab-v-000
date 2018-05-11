@@ -26,6 +26,8 @@ class PigLatinizer
                 latinized_word << vowel_words_piglatinize(words)
             elsif word[0] == "I" #for "I" in mid sentence
                 latinized_word << words.split(//).push("way").join
+            elsif word[0] == "i" #for "I" in mid sentence
+                latinized_word << words.split(//).push("way").join
             elsif word[0] == "p" && word[1] == "l" #consonant clusters of 2
                 latinized_word <<  consonant_cluster_of_2(words)
             elsif word[0] = "t" && word[1] == 'h'
