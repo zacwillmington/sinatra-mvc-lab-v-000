@@ -35,7 +35,7 @@ class PigLatinizer
                 #consonant clusters of 2
                 binding.pry
                   latinized_word << words.split(//).unshift("ay")
-              elsif @words == "pray"
+              elsif @words == "prays"
                   #consonant clusters of 2
                   binding.pry
                     latinized_word << words.split(//).unshift("ay")
