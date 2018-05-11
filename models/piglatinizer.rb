@@ -12,7 +12,6 @@ class PigLatinizer
         word_arr = []
 
         if single_word_string?(words)
-            binding.pry
             piglatinize_single_word(words)
         else
             binding.pry
