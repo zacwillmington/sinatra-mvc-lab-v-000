@@ -52,7 +52,6 @@ class PigLatinizer
         def piglatinize_phrase_string(words)
             latinized_phrase = []
             words.split(" ").each do |word|
-                binding.pry
                  latinized_phrase << piglatinize_single_word(word)
              end
              latinized_phrase.join(" ")
