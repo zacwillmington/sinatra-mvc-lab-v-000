@@ -42,6 +42,8 @@ class PigLatinizer
                     latinized_word << words.split(//).unshift("ay")
             elsif words.include?("pr")
                 latinized_word << consonant_cluster_of_2(words)
+            elsif words.include?("st")
+                latinized_word << consonant_cluster_of_2(words)
             else #single consonant words
                 latinized_word << consonant_words(words)
             end
@@ -102,7 +104,7 @@ class PigLatinizer
 
 end
 #Current
-# eHay asway anway oldway anmay owhay ishedfay aloneway inway away kiffsay inway ethay ulfGay treamSay andway ehay adhay onegay eightyway ourfay aysday ownay ithoutway akingtay away ishfay
+# eHay asway anway oldway anmay owhay ishedfay aloneway inway away kiffsay inway ethay ulfGay `treamSay` andway ehay adhay onegay eightyway ourfay aysday ownay ithoutway akingtay away ishfay
 
 
 #expected
