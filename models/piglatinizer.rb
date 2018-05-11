@@ -38,7 +38,6 @@ class PigLatinizer
                 #consonant clusters of 2
                   latinized_word << words.split(//).shift("ay").join
             else #single consonant words
-                binding.pry
                 latinized_word << consonant_words(words)
             end
             latinized_word.join
@@ -62,7 +61,6 @@ class PigLatinizer
         word.shift[0]
         word << first_letter
         latinized_word = word.push("ay").join
-        binding.pry
     end
 
     def consonant_cluster_of_2(words)
