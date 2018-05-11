@@ -33,6 +33,8 @@ class PigLatinizer
                  latinized_word <<  consonant_cluster_of_2(words)
             elsif words.include?("spr")
                 #consonant clusters of 2
+
+                binding.pry
                   latinized_word << words.split(//).push("ay")
             else #single consonant words
                 latinized_word << consonant_words(words)
