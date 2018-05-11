@@ -54,7 +54,7 @@ class PigLatinizer
                 binding.pry
                  latinized_phrase << piglatinize_single_word(word)
              end
-             latinized_phrase.join
+             latinized_phrase.join(" ")    
          end
 
      def vowel_words_piglatinize(words)
