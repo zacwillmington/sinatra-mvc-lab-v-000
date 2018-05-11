@@ -93,7 +93,7 @@ class PigLatinizer
     end
 
     def single_word_string?(string)
-        if string.split.size == 1
+        if string.split(" ").size == 1
             true
         else
             string
