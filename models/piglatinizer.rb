@@ -19,24 +19,22 @@ class PigLatinizer
 
     def piglatinize_single_word(words)
         latinized_word = []
-         word = words.split(//) #> [p,o,r,k]
+        
             vowels =["a","e","i","o","u","A","E", "O", "U"]
-            if vowels.include?(word[0])
+            if vowels.include?(words[0])
                 latinized_word << vowel_words_piglatinize(words)
-            elsif word[0] == "I" #for "I" in mid sentence
+            elsif words[0] == "I" #for "I" in mid sentence
                 latinized_word << word.push("way").join
-            elsif word[0] == "p" && word[1] == "l" #consonant clusters of 2
+            elsif words[0] == "p" && words[1] == "l" #consonant clusters of 2
                 latinized_word <<  consonant_cluster_of_2(words)
-            elsif word[0] = "t" && word[1] == 'h'
+            elsif words[0] = "t" && words[1] == 'h'
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
             elsif words[0] == "s" && words[1] == "p" && word[2] == "r"#consonant clusters of 3
-                binding.pry
-                latinized_word << words.shift("ay").join
-            elsif word[0] == "s" && word[1] == "p"
+                latinized_word << words.split(//).shift("ay").join
+            elsif words[0] == "s" && words[1] == "p"
                 #consonant clusters of 2
-                binding.pry
-                  latinized_word << words.shift("ay").join
+                  latinized_word << words.split(//).shift("ay").join
             else #single consonant words
                 binding.pry
                 latinized_word << consonant_words(words)
