@@ -31,11 +31,11 @@ class PigLatinizer
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
                 # binding.pry
+            elsif word[0] == "s" && word[1] == "p" && word[2] == "r"#consonant clusters of 3
+                latinized_word << consonant_cluster_of_3(words)
             elsif word[0] == "s" && word[1] == "p"
                 #consonant clusters of 2
                  latinized_word << consonant_cluster_of_2(words)
-             elsif word[0] == "s" && word[1] == "p" && word[2] == "r"#consonant clusters of 3
-                 latinized_word << consonant_cluster_of_3(words)
             else #single consonant words
                 latinized_word << consonant_words(words)
             end
