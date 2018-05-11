@@ -9,7 +9,7 @@ class PigLatinizer
 
     def piglatinize(words)
         binding.pry
-        @words = words[:user_phrase]
+        @words = :user_phrase
         binding.pry
         word_arr = []
 
