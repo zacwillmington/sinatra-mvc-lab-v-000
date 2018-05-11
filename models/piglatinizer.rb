@@ -42,7 +42,7 @@ class PigLatinizer
                     latinized_word << words.split(//).unshift("ay")
             elsif words.include?("pr")
                 latinized_word << consonant_cluster_of_2(words)
-            elsif words.include?("st")
+            elsif words.include?("St")
                 latinized_word << consonant_cluster_of_2(words)
             else #single consonant words
                 latinized_word << consonant_words(words)
