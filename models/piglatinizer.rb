@@ -34,7 +34,7 @@ class PigLatinizer
                 latinized_word << consonant_cluster_of_3(words)
             elsif word[0] == "s" && word[1] == "p"
                 #consonant clusters of 2
-                 latinized_word << word.unshit("ay").join consonant_cluster_of_2(words)
+                  latinized_word << word.unshit("ay").join 
             else #single consonant words
                 latinized_word << consonant_words(words)
             end
