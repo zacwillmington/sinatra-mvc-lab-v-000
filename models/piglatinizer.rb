@@ -21,6 +21,7 @@ class PigLatinizer
         latinized_word = []
          word = words.split(//) #> [p,o,r,k]
             vowels =["a","e","i","o","u","A","E", "O", "U"]
+            binding.pry
             if vowels.include?(word[0])
                 latinized_word << vowel_words_piglatinize(words)
             elsif word[0] == "I" #for "I" in mid sentence
