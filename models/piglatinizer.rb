@@ -51,7 +51,7 @@ class PigLatinizer
          end
 
      def vowel_words_piglatinize(words)
-          word = words.downcase.split(//)
+          word = words.split(//)
         word.push("way").join
     end
 
