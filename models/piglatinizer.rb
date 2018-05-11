@@ -8,28 +8,25 @@ class PigLatinizer
     end
 
     def piglatinize(words)
-        binding.pry
         @words = words
-
-        binding.pry
         word_arr = []
 
-        if single_word_string?(@words)
-            piglatinize_single_word(@words)
+        if single_word_string?(words)
+            piglatinize_single_word(words)
         else
-            piglatinize_phrase_string(@words)
+            piglatinize_phrase_string(words)
         end
     end
 
     def piglatinize_single_word(words)
         latinized_word = []
-        word = @words.split(//)
+        word = words.split(//)
 
             vowels =["a","e","i","o","u","A","E", "O", "U"]
-            if vowels.include?(@words[0])
-                latinized_word << vowel_words_piglatinize(@words)
+            if vowels.include?(words[0])
+                latinized_word << vowel_words_piglatinize(words)
             elsif word[0] == "I" #for "I" in mid sentence
-                latinized_word << @words.split(//).push("way").join
+                latinized_word << words.split(//).push("way").join
             elsif word[0] == "i" #for "I" in mid sentence
                 latinized_word << words.split(//).push("way").join
             elsif word[0] == "p" && word[1] == "l" #consonant clusters of 2
@@ -37,10 +34,10 @@ class PigLatinizer
             elsif word[0] = "t" && word[1] == 'h'
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
-            elsif @words == "spray"
+            elsif words == "spray"
                 #consonant clusters of 2
                   latinized_word << words.split(//).unshift("ay")
-              elsif @words == "prays"
+              elsif words == "prays"
                   #consonant clusters of 2
                     latinized_word << words.split(//).unshift("ay")
             elsif words.include?("pr")
@@ -61,7 +58,7 @@ class PigLatinizer
 
      def vowel_words_piglatinize(words)
 
-        @words.split(//).push("way").join
+        words.split(//).push("way").join
     end
 
     def consonant_words(words)
