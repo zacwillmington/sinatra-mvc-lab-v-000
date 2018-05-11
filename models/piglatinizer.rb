@@ -9,6 +9,7 @@ class PigLatinizer
 
     def piglatinize(words)
         @words = words
+        binding.pry
         word_arr = []
 
         if single_word_string?(words)
