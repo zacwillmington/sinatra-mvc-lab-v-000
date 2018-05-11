@@ -65,6 +65,7 @@ class PigLatinizer
     end
 
     def consonant_cluster_of_2(words)
+        binding.pry
          word = words.split(//)
         first_2_letters = word.unshift[0]
         first_2_letters += word.unshift[1]
