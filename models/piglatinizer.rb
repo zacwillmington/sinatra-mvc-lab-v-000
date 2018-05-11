@@ -40,6 +40,7 @@ class PigLatinizer
                   binding.pry
                     latinized_word << words.split(//).unshift("ay")
             else #single consonant words
+                binding.pry
                 latinized_word << consonant_words(words)
             end
             latinized_word.join
