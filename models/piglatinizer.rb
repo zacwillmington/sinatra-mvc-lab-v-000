@@ -31,7 +31,7 @@ class PigLatinizer
             elsif word[0] = "t" && word[1] == 'h'
                 #consonant clusters of 2
                  latinized_word <<  consonant_cluster_of_2(words)
-            elsif words.include?("spr") || words.include?("sp")
+            elsif words == "spray" || words  == "pray"
                 #consonant clusters of 2
 
                 binding.pry
