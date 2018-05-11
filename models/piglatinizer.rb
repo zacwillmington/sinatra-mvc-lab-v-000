@@ -39,7 +39,7 @@ class PigLatinizer
                 binding.pry
                 latinized_word << consonant_words(words)
             end
-            latinized_word.join(" ")
+            latinized_word
         end
 
         def piglatinize_phrase_string(words)
