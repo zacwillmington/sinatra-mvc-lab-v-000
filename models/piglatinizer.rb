@@ -14,7 +14,6 @@ class PigLatinizer
         if single_word_string?(words)
             piglatinize_single_word(words)
         else
-            binding.pry
             piglatinize_phrase_string(words)
         end
     end
