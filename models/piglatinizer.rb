@@ -35,7 +35,7 @@ class PigLatinizer
                  latinized_word <<  consonant_cluster_of_2(words)
             elsif words[0] == "s" && words[1] == "p" && words[2] == "r"#consonant clusters of 3
                 latinized_word << words.split(//).shift("ay").join
-            elsif words[0] == "s" && words[1] == "p"
+            elsif words.include("spr")
                 #consonant clusters of 2
                   latinized_word << words.split(//).shift("ay").join
             else #single consonant words
